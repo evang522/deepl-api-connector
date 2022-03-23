@@ -16,6 +16,8 @@ final class DeeplRequestFactory implements DeeplRequestFactoryInterface
 
     private $streamFactory;
 
+    private $apiConfiguration;
+
     public function __construct(
         string $authKey,
         StreamFactoryInterface $streamFactory

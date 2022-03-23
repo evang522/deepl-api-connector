@@ -30,6 +30,7 @@ class DeeplClient implements DeeplClientInterface
 
     private $requestFactory;
 
+
     public function __construct(
         DeeplRequestFactoryInterface $deeplRequestFactory,
         ClientInterface $httpClient,

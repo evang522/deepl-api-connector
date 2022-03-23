@@ -9,6 +9,7 @@ use Http\Discovery\Psr18ClientDiscovery;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\StreamFactoryInterface;
+use Scn\DeeplApiConnector\Enum\ApiTier;
 use Scn\DeeplApiConnector\Handler\DeeplRequestFactory;
 
 /**
@@ -20,7 +21,8 @@ final class DeeplClientFactory
         string $authKey,
         ClientInterface $httpClient = null,
         RequestFactoryInterface $requestFactory = null,
-        StreamFactoryInterface $streamFactory = null
+        StreamFactoryInterface $streamFactory = null,
+        string $apiTier = ApiTier::PAID
     ): DeeplClientInterface {
         return new DeeplClient(
             new DeeplRequestFactory(
